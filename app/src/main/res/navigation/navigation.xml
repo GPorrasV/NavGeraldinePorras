@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/modaFragment">
+
+    <fragment
+        android:id="@+id/modaFragment"
+        android:name="ni.edu.uca.navgeraldineporras.ModaFragment"
+        android:label="Calculo moda"
+        tools:layout="@layout/fragment_moda" >
+        <action
+            android:id="@+id/action_modaFragment_to_cuboFragment"
+            app:destination="@id/cuboFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cuboFragment"
+        android:name="ni.edu.uca.navgeraldineporras.CuboFragment"
+        android:label="Calculo cubo"
+        tools:layout="@layout/fragment_cubo" >
+        <action
+            android:id="@+id/action_cuboFragment_to_nombreFragment"
+            app:destination="@id/nombreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nombreFragment"
+        android:name="ni.edu.uca.navgeraldineporras.NombreFragment"
+        android:label="Nombre"
+        tools:layout="@layout/fragment_nombre" >
+        <action
+            android:id="@+id/action_nombreFragment_to_modaFragment2"
+            app:destination="@id/modaFragment" />
+    </fragment>
+</navigation>
